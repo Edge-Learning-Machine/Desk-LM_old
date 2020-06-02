@@ -52,20 +52,11 @@ if cfg.algo.lower() == 'k-nn':
     fu.saveTrainingSet(X_train, y_train)
 if cfg.export_dir != None:
     from distutils.dir_util import copy_tree
-    '''
-    if cfg.ds_test:
-        fromDirectory = f"./out/{cfg.ds_name}/include/{cfg.algo}"
-        toDirectory = f"{cfg.export_dir}/{cfg.ds_name}/include/{cfg.algo}"
-        copy_tree(fromDirectory, toDirectory)
-    else:
-        fromDirectory = f"./out/include/{cfg.algo}"
-        toDirectory = f"{cfg.export_dir}/include/{cfg.algo}"
-        copy_tree(fromDirectory, toDirectory)
-    '''
+
     fu.cleanSIDirs(f'{cfg.export_dir}/')
     fromDirectory = f"./out/include"
-    toDirectory = f"{cfg.export_dir}/include"
+    toDirectory = f"{cfg.export_dir}/ds/include"
     copy_tree(fromDirectory, toDirectory)
     fromDirectory = f"./out/source"
-    toDirectory = f"{cfg.export_dir}/source"
+    toDirectory = f"{cfg.export_dir}/ds/source"
     copy_tree(fromDirectory, toDirectory)

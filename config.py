@@ -1,8 +1,8 @@
 # Name of the dataset
-ds_name = ''
+ds_name = '' # heart, energydata_complete, peugeot_207_01
 
 # Algorithm
-algo = ''
+algo = '' # SVM, K-nn, ANN, DT (see launch.json)
 
 # Regression
 regr = False
@@ -29,8 +29,8 @@ n_folds = 5
 repeats = 1
 
 # Principal component analysis
-pca = '' #'mle' 
 
+pca = '' #'mle' 
 # csv file
 delimiter = ''
 decimal = ','
@@ -54,7 +54,7 @@ svm_param_grid = {'C':[0.01, 0.1, 1, 10, 100]}
 # Normalization
 normalization = 'Standard'#'MinMax' #'Standard' #None
 
-export_dir = 'E:/2009 Articles/Applepies/2019/ML/Journal/Edge-CAI'
+export_dir = 'E:\\STM32Toolchain\\2020\\Eclipse_CDT\\Workspace\\MicroML_' #'E:/2009 Articles/Applepies/2019/ML/Journal/Edge-CAI'
 ds_test = True
 
 def config(ds, alg):

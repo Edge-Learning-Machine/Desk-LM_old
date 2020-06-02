@@ -379,7 +379,12 @@ def checkCreateGeneralSourceDir():
 
 def cleanSIDirs(path):
     import shutil
-    shutil.rmtree(path+'/source/', ignore_errors=True)
-    os.mkdir(path+'/source/')
-    shutil.rmtree(path+'/include/', ignore_errors=True)
-    os.mkdir(path+'/include/')
+    if (os.path.exists(path+'/ds/source/')):
+        shutil.rmtree(path+'/ds/source/', ignore_errors=True)
+    if os.path.isdir(path) == False:
+        os.mkdir(path)
+    if os.path.isdir(path+'/ds') == False:
+        os.mkdir(path+'/ds')
+    os.mkdir(path+'/ds/source/')
+    shutil.rmtree(path+'/ds/include/', ignore_errors=True)
+    os.mkdir(path+'/ds/include/')
