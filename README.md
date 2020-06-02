@@ -36,6 +36,7 @@ We have tried the software with the following datasets:
 Heart Disease UCI | Kaggle. Available online: http://www.kaggle.com/ronitf/heart-disease-uci 
 
 Boero, L.; Cello, M.; Marchese, M.; Mariconti, E.; Naqash, T.; Zappatore, S. Statistical fingerprint—Based intrusion detection system (SF-IDS). Int. J. Commun. Syst. 2017, 30, e3225.
+
 Fausto, A.; Marchese, M. Implementation Details to Reduce the Latency of an SDN Statistical Fingerprint-Based IDS. In Proceedings of the IEEE International Symposium on Advanced Electrical and Communication Technologies (ISAECT), Rome, Italy, 27–29 November 2019.
 
 http://www.fizyka.umk.pl/kis-old/projects/datasets.html#Sonar 
@@ -43,7 +44,9 @@ http://www.fizyka.umk.pl/kis-old/projects/datasets.html#Sonar
 Traffic, Driving Style and Road Surface Condition | Kaggle. Available online: http://www.kaggle.com/gloseto/traffic-driving-style-road-surface-condition
 
 EnviroCar—Datasets—the Datahub. Available online: http://www.old.datahub.io/dataset/envirocar (accessed on 13 February 2020).
+
 Massoud, R.; Poslad, S.; Bellotti, F.; Berta, R.; Mehran, K.; Gloria, A.D. A fuzzy logic module to estimate a driver’s fuel consumption for reality-enhanced serious games. Int. J. Serious Games 2018, 5, 45–62.
+
 Massoud, R.; Bellotti, F.; Poslad, S.; Berta, R.; De Gloria, A. Towards a reality-enhanced serious game to promote eco-driving in the wild. In Games and Learning Alliance. GALA 2019. Lecture Notes in Computer Science; Liapis, A., Yannakakis, G., Gentile, M., Ninaus, M., Eds.; Springer: Berlin, Germany, 2019
 
 Search for and download air quality data | NSW Dept of Planning, Industry and Environment. Available online: http://www.dpie.nsw.gov.au/air-quality/search-for-and-download-air-quality-data (accessed on 13 February 2020).
@@ -82,8 +85,6 @@ float 32 data are used
 
 ## Run
 python main.py -d <dataset_name> -a <algo_name>
-
-python gpus.py - Get names of the enabled GPUs 
 
 ## Version
 Currently tested with Python 3.6, Keras 2.2.4 and Tensorflow 1.8.0
