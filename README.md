@@ -62,7 +62,7 @@ For ANN only:
 
 ### Output
 
-In config.py the user can specify the export_dir, where the files usable by Micro-LM will be exported. Particularly, the files will be outuput under: "export_dir/ds/source" and "export_dir/ds/include". Output files are also duplicated in the following directories:
+In config.py the user can specify the export_dir variable, where all the files usable by Micro-LM (please see https://github.com/Edge-Learning-Machine/Micro-LM for usage instructions) will be exported. Particularly, the files will be outuput under: "export_dir/ds/source" and "export_dir/ds/include". Output files are also duplicated in the following directories:
 
 #### Linear SVM / DT / K-NN 
 In './out/source/' and in './out/include/', the .c and .h files are generated, that contain the selected model parameters, that need to be compiled in a Edge-LM project.
@@ -71,11 +71,21 @@ The same output is also provided under:
 './out/' + cfg.ds_name + '/include/' + cfg.algo.lower() + '/'
 
 #### ANN
-In './out/source/', the preprocess_params.c file is saved
-In './out/include/', the preprocess_params.h file is saved, together with files for dataset testing and the ANN model in hdf5 format
+In "export_dir/ds/source" and './out/source/', the preprocess_params.c file is saved, together with .c file for dataset testing
+In "export_dir/ds/include" and './out/include/', the preprocess_params.h file is saved, together with .h file for dataset testing and the ANN model in hdf5 format
 
 The same output is also provided under:
-'./out/' + cfg.ds_name + '/include/' + cfg.algo.lower() + '/', the ANN model in hdf5 format is saved
+'./out/' + cfg.ds_name + '/include/' + cfg.algo.lower()
+
+##### Use an ANN in a CubeIDE project, using STM X-Cube-AI package (for STM32 Nucleo boards only): 
+1- Load the generated .h5 model from DeskML into STM32CubeIDE and generate the code for your target board
+
+2- Use the generated files in your project for pre-processing and/or dataset testing
+
+#### Testing
+if the nTests variable (config.py) is equal to 'full', testing_set (.c and .h files) is produced.
+Otherwise, a minimal_testing_set (.c and .h files) is produced.
+All these files are used by Micro-LM to test a whole dataset or part of it
 
 ### Log
 ./\<ds_name\>.log, log file for each dataset 
