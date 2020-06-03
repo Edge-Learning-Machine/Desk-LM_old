@@ -26,7 +26,7 @@ https://www.mdpi.com/1424-8220/20/9/2638
 
 The command line expects two input parameters (see launch.json):
 
--a < algorithm >
+-a < algorithm_name>
 
 Currently, we support SVM, K-nn, ANN, DT.
 
