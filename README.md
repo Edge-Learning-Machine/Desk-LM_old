@@ -97,9 +97,4 @@ float 32 data are used
 python main.py -d <dataset_name> -a <algo_name>
 
 ## Version
-Currently tested with Python 3.6, Keras 2.2.4 and Tensorflow 1.8.0
-
-You can know and install the needed packages using the following commands:
-$pip install freeze
-$pip freeze > requirements.txt 
-$pip install -r requirements.txt
+Currently tested with Python 3.6, Keras 2.2.4 and Tensorflow 1.8.0, which is needed for importing the ANN model in Cube-AI
