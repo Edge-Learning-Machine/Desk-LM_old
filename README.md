@@ -32,6 +32,8 @@ Currently, we support SVM, K-nn, ANN, DT.
 
 -d <dataset_name>. The software expects a <dataset_name>.csv file in ../datasets/
 
+Numeric only datasets are accepted, by now.
+
 We have tried the software with the following datasets:
 Heart Disease UCI | Kaggle. Available online: http://www.kaggle.com/ronitf/heart-disease-uci 
 
